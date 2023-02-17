@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키움에셋플래너</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8.2.2/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <header>
+            <button type="button" class="header_btn header_btn_back" onclick="location.href = document.referrer;"></button>
+            <h1 class="header_tit">보험비교견적</h1>
+            <button type="button" class="header_btn header_btn_close"></button>
+        </header>
+        <!-- //header -->
+
+        <main id="container" class="completion">
+            <!-- 2022-12-20 텍스트 삭제 -->
+
+            <div class="main_content">
+                <p class="subtit fw700">무료 전문가 설계가</p>
+                <p class="tit fw700">정상적으로 접수되었습니다</p>
+                <div class="img_wrap">
+                    <img src="./assets/images/img_completion.png" alt="">
+                </div>
+                <ul class="list_wrap">
+                    <!-- 2022-12-20 텍스트 수정 -->
+                    <li class="list_item fw600">정확한 전문가 설계를 위해<br>
+                        키움에셋플래너 고객센터에서 먼저 연락을 드릴께요</li>
+                    <li class="list_item fw600">(*주말 신청 건은 익영업일에 순차적으로 안내 해드리니<br>
+                        조금만 기다려주세요)</li>
+                </ul>
+                <ul class="link_wrap">
+                    <li class="list_item is_active">
+                        <a href="javascript:return false;">
+                            <span class="img_wrap"><img src="./assets/images/icon_link_share.png" alt=""></span>
+                            <p>가족과 부모님께 <br> 보험을 찾아드려요</p>
+                        </a>
+                    </li>
+                    <li class="list_item is_active">
+                        <a href="javascript:return false;">
+                            <span class="img_wrap"><img src="./assets/images/icon_link_kakao.png" alt=""></span>
+                            <p>간단하고 쉬운 <br> 카톡 알리기</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //main_content -->
+        </main>
+        <!-- //main -->
+
+        <footer>
+            <div class="btn_wrap full_h60">
+                <button type="button" class="btn_type_main fw700 fs16">확인</button>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- popup -->
+        <div class="popup complete01_popup">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span>안내</span>
+                <p class="subtit fs16 fw600">주소가 복사되었습니다</p>
+                <p class="text_wrap fs16">연락처 앱을 열고, <strong class="fw700 fs16">길게 눌러 붙어넣기</strong> 하세요</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1226 기획 요청으로 삭제 -->
+        <!-- <div class="popup complete01_popup">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span>안내</span>
+                <p class="subtit fs16 fw600">카카오톡 열기를 실행합니다</p>
+                <p class="text_wrap fs16">전달하고 싶은 카톡 친구를 선택하세요</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16">확인</button>
+                </div>
+            </div>
+        </div> -->
+        <!-- //popup -->
+
+    </div>
+    <!-- //wrap -->
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dist/common.js"></script>
+</body>
+
+</html>

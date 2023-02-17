@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키움에셋플래너</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="wrap" class="wrap result_wrap">
+        <header>
+            <button type="button" class="header_btn header_btn_back" onclick="location.href = document.referrer;"></button>
+            <h1 class="header_tit">보험비교견적</h1>
+            <button type="button" class="header_btn header_btn_close"></button>
+        </header>
+        <!-- //header -->
+
+        <!-- 담보유형 -->
+        <main id="container" class="result type02 none-padding">
+            <p class="notice_tit">키움에셋플래너 심의필 제2301001호 (2023.01.03 ~ 2024.01.02) <br>
+                초간단 비교견적은 키움에셋플래너가 제공합니다.</p>
+
+            <div class="main_content">
+                <div class="result_container">
+                    <p class="main_tit">원하는 보장 범위를<br>선택해 보세요</p>
+                    <ul class="tap_nav">
+                        <li class="on basic">기본형</li>
+                        <li class="advanced">고급형</li>
+                    </ul>
+                    <div class="tap_con">
+                        <div id="tap01" class="selec_box active basic">
+                            <h3 class="fw700">합리적인 <strong class="dot">가</strong><strong class="dot">격</strong>!</h3>
+                            <ul class="list_wrap">
+                                <!-- <li class="list_item active">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">S◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="detail">원더◇◇◇</p>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </li>
+                                <li class="list_item">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="detail">원더◇◇◇플러스가족</p>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </li>
+                                <li class="list_item">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">S◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="detail">원더◇◇◇플러스가족사랑 보험</p>
+                                        <span class="price fw700">월 38,000 원</span>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <div id="tap02" class="selec_box advanced">
+                            <h3 class="fw700 text_right"><strong class="dot">보</strong><strong class="dot">장</strong> <strong class="dot">범</strong><strong class="dot">위</strong>를 넓게!</h3>
+                            <ul class="list_wrap">
+                                <!-- <li class="list_item active">
+                                    <div class="img" style="background-color: #5CC25E;"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">S◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="detail">원더◇◇◇플러스가족사랑 보험</p>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </li>
+                                <li class="list_item">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="detail">원더◇◇◇플러스가족사랑 보험</p>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </li>
+                                <li class="list_item">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">S◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <p class="detail">원더◇◇◇플러스가족사랑 보험</p>
+                                        <span class="price fw700">월 38,000 원</span>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="selec_result detail on">
+                        <!-- <ul class="list_wrap">
+                            <li class="list_item fw700">| 비갱신형, 20년 100세 만기</li>
+                            <li class="list_item fw700">| 일반해지, 프리미엄골드클래스, 납입면제 적용</li>
+                            <li class="list_item fw700">| 기본계약 상해사망후유 20~100% 100만</li>
+                        </ul>
+                        <table>
+                            <caption class="blind">조회결과 상세</caption>
+                            <colgroup>
+                                <col style="width: 40%;" />
+                                <col style="width: 30%;" />
+                                <col style="width: 30%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text_left">담보명</th>
+                                    <th scope="col" class="text_right">가입금액</th>
+                                    <th scope="col" class="text_right">단가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text_left">상해 후유장해</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">500 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">600 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="join_wrap">
+                            <p class="tit fs16 fw600">잠깐! 보험 가입은 빠를수록 좋아요</p>
+                            <p class="text fw600">해당 상품의 평균 보험료를 고객님 조회 기준으로 나타낸 수치입니다. 예시 금액으로 실제 가입 내역에 따라 달라질 수 있습니다</p>
+                            <div class="img_wrap">
+                                <span class="bubble1 bubble"></span>
+                                <span class="bubble2 bubble"></span>
+                                <span class="bubble3 bubble"></span>
+                                <span class="img_join"></span>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="selec_result on">
+                        <ul class="list_wrap">
+                            <li class="list_item fw700">| 비갱신형, 20년 100세 만기</li>
+                            <li class="list_item fw700">| 일반해지, 프리미엄골드클래스, 납입면제 적용</li>
+                            <li class="list_item fw700">| 기본계약 상해사망후유 20~100% 100만</li>
+                        </ul>
+                        <table>
+                            <caption class="blind">조회결과 상세</caption>
+                            <colgroup>
+                                <col style="width: 40%;" />
+                                <col style="width: 30%;" />
+                                <col style="width: 30%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text_left">담보명</th>
+                                    <th scope="col" class="text_right">가입금액</th>
+                                    <th scope="col" class="text_right">단가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text_left">상해 후유장해</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">500 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">600 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="join_wrap">
+                            <p class="tit fs16 fw600">잠깐! 보험 가입은 빠를수록 좋아요</p>
+                            <p class="text fw600">해당 상품의 평균 보험료를 고객님 조회 기준으로 나타낸 수치입니다. 예시 금액으로 실제 가입 내역에 따라 달라질 수 있습니다</p>
+                            <div class="img_wrap">
+                                <span class="bubble1 bubble"></span>
+                                <span class="bubble2 bubble"></span>
+                                <span class="bubble3 bubble"></span>
+                                <span class="img_join"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selec_result">
+                        <ul class="list_wrap">
+                            <li class="list_item fw700">| 기본계약 상해사망후유 20~100% 100만</li>
+                            <li class="list_item fw700">| 비갱신형, 20년 100세 만기</li>
+                            <li class="list_item fw700">| 일반해지, 프리미엄골드클래스, 납입면제 적용</li>
+                        </ul>
+                        <table>
+                            <caption class="blind">조회결과 상세</caption>
+                            <colgroup>
+                                <col style="width: 40%;" />
+                                <col style="width: 30%;" />
+                                <col style="width: 30%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text_left">담보명</th>
+                                    <th scope="col" class="text_right">가입금액</th>
+                                    <th scope="col" class="text_right">단가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text_left">상해 후유장해</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">500 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">600 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="join_wrap">
+                            <p class="tit fs16 fw600">잠깐! 보험 가입은 빠를수록 좋아요</p>
+                            <p class="text fw600">해당 상품의 평균 보험료를 고객님 조회 기준으로 나타낸 수치입니다. 예시 금액으로 실제 가입 내역에 따라 달라질 수 있습니다</p>
+                            <div class="img_wrap">
+                                <span class="bubble1 bubble"></span>
+                                <span class="bubble2 bubble"></span>
+                                <span class="bubble3 bubble"></span>
+                                <span class="img_join"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selec_result">
+                        <ul class="list_wrap">
+                            <li class="list_item fw700">| 기본계약 상해사망후유 20~100% 100만</li>
+                            <li class="list_item fw700">| 비갱신형, 20년 100세 만기</li>
+                            <li class="list_item fw700">| 일반해지, 프리미엄골드클래스, 납입면제 적용</li>
+                        </ul>
+                        <table>
+                            <caption class="blind">조회결과 상세</caption>
+                            <colgroup>
+                                <col style="width: 40%;" />
+                                <col style="width: 30%;" />
+                                <col style="width: 30%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text_left">담보명</th>
+                                    <th scope="col" class="text_right">가입금액</th>
+                                    <th scope="col" class="text_right">단가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text_left">상해 후유장해</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">500 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">600 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="join_wrap">
+                            <p class="tit fs16 fw600">잠깐! 보험 가입은 빠를수록 좋아요</p>
+                            <p class="text fw600">해당 상품의 평균 보험료를 고객님 조회 기준으로 나타낸 수치입니다. 예시 금액으로 실제 가입 내역에 따라 달라질 수 있습니다</p>
+                            <div class="img_wrap">
+                                <span class="bubble1 bubble"></span>
+                                <span class="bubble2 bubble"></span>
+                                <span class="bubble3 bubble"></span>
+                                <span class="img_join"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selec_result">
+                        <ul class="list_wrap">
+                            <li class="list_item fw700">| 기본계약 상해사망후유 20~100% 100만</li>
+                            <li class="list_item fw700">| 비갱신형, 20년 100세 만기</li>
+                            <li class="list_item fw700">| 일반해지, 프리미엄골드클래스, 납입면제 적용</li>
+                        </ul>
+                        <table>
+                            <caption class="blind">조회결과 상세</caption>
+                            <colgroup>
+                                <col style="width: 40%;" />
+                                <col style="width: 30%;" />
+                                <col style="width: 30%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text_left">담보명</th>
+                                    <th scope="col" class="text_right">가입금액</th>
+                                    <th scope="col" class="text_right">단가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text_left">상해 후유장해</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">500 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">600 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="join_wrap">
+                            <p class="tit fs16 fw600">잠깐! 보험 가입은 빠를수록 좋아요</p>
+                            <p class="text fw600">해당 상품의 평균 보험료를 고객님 조회 기준으로 나타낸 수치입니다. 예시 금액으로 실제 가입 내역에 따라 달라질 수 있습니다</p>
+                            <div class="img_wrap">
+                                <span class="bubble1 bubble"></span>
+                                <span class="bubble2 bubble"></span>
+                                <span class="bubble3 bubble"></span>
+                                <span class="img_join"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selec_result">
+                        <ul class="list_wrap">
+                            <li class="list_item fw700">| 기본계약 상해사망후유 20~100% 100만</li>
+                            <li class="list_item fw700">| 비갱신형, 20년 100세 만기</li>
+                            <li class="list_item fw700">| 일반해지, 프리미엄골드클래스, 납입면제 적용</li>
+                        </ul>
+                        <table>
+                            <caption class="blind">조회결과 상세</caption>
+                            <colgroup>
+                                <col style="width: 40%;" />
+                                <col style="width: 30%;" />
+                                <col style="width: 30%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text_left">담보명</th>
+                                    <th scope="col" class="text_right">가입금액</th>
+                                    <th scope="col" class="text_right">단가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text_left">상해 후유장해</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">500 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">상해사망</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">1,000 만원</td>
+                                    <td class="text_right">600 원</td>
+                                </tr>
+                                <tr>
+                                    <td class="text_left">담보명</td>
+                                    <td class="text_right">2,000 만원</td>
+                                    <td class="text_right">100 원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="join_wrap">
+                            <p class="tit fs16 fw600">잠깐! 보험 가입은 빠를수록 좋아요</p>
+                            <p class="text fw600">해당 상품의 평균 보험료를 고객님 조회 기준으로 나타낸 수치입니다. 예시 금액으로 실제 가입 내역에 따라 달라질 수 있습니다</p>
+                            <div class="img_wrap">
+                                <span class="bubble1 bubble"></span>
+                                <span class="bubble2 bubble"></span>
+                                <span class="bubble3 bubble"></span>
+                                <span class="img_join"></span>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <div class="tip_wrap">
+                        <ul class="list_wrap">
+                            <li class="list_item tit fw700">Tip 비교견적 결과 알아두세요!</li>
+                            <li class="list_item">· 조회 결과는 고객님의 기본 정보만으로 계산하여, 실제 보험료와 다를 수 있습니다.</li>
+                            <li class="list_item">· 금융소비자보호법으로 인하여 보험사명과 상품명을 전체 공개할 수 없습니다.</li>
+                            <li class="list_item">· 일부 상품의 경우 나이, 병력 등으로 인해 가입이 어려울 수 있습니다.</li>
+                            <li class="list_item">· 전문가 설계를 통해 더 다양하고 상세한 상품 견적을 받을 수 있습니다.</li>
+                            <li class="list_item">· 보험 가입 시, 개별 약관 확인이 꼭 필요하며 전문가 설계를 통해 전문가와 먼저 상의하시길 바랍니다.</li>
+                        </ul>
+                    </div>
+
+                    <div class="service_wrap">
+                        <div class="img_wrap"><img src="./assets/images/img_serviceinfo.png" alt=""></div>
+                        <p class="fw600">위 견적서를 받고, 더 많은 정보를 문의할 수 있어요 <br>
+                            보험 전문가와 상담해보세요.</p>
+                    </div>
+
+                    <footer>
+                        <div class="btn_wrap full_h60">
+                            <button type="button" class="finish_btn btn_type_main fw700 fs16">무료 전문가 설계 신청</button>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+
+        <!-- popup -->
+        <!-- 보장범위 확인 팝업 -->
+        <div class="popup result01_popup max">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span class="fs16">안내</span>
+                <strong class="fw600 fs16">보장 범위가 달라요!</strong>
+                <p class="fs16">각 상품 기준으로 비교하세요</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 담보가 없을 경우 -->
+        <div class="popup result01_popup">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span class="fs16">안내</span>
+                <strong class="fw600 fs16">고급형 담보가 없어요!</strong>
+                <p class="fs16">기본형만 구성된 보험종류입니다</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- //popup -->
+    </div>
+    <!-- //wrap -->
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dist/common.js"></script>
+    <script>
+        $(async function() {
+            // $.ajax({
+            //     type: 'POST',
+            //     url: './assets/result1.json',
+            //     dataType: 'json',
+            //     async: false,
+            //     data: _data,
+            //     beforeSend: function(xhr) {},
+            //     complete: function(request,status) {}
+            // }).done(function(data, textStatus, jqXHR) {
+            //     console.log(data)
+            // }).fail(function(jqXHR, textStatus) {
+            //     alert('textStatus: ' + textStatus);
+            //     return;
+            // });
+
+            // API 문서, 파일 매핑 되지 않음
+            // dummy json으로 데이터 작업
+            
+            // 43세 더미 API 사용
+            // 플랜코드에_해당하는_플랜상품목록_및_보험료_수신
+            let productList;
+            let productDetailContent;
+            let selectedList;
+            await $.getJSON( "./assets/json/result1.json", function( data ) {
+                console.log('플랜코드에_해당하는_플랜상품목록_및_보험료_수신 DUMMY API GET')
+                productList = data.planProductInfoList[0].planProductList;
+                // console.log(productList)
+            });
+
+            // 플랜상품_보험료_정보_수신
+            await $.getJSON( "./assets/json/result2.json", function( data ) {
+                // console.log(data);
+                // 43세 DB회사 API 사용
+                // 1개 API밖에 없어서 공통으로 사용
+                productDetailContent = data.premiumsPlanProudctInfoList[0].premiumsPlanProudctList
+                // console.log(productDetailContent)
+            })
+
+            const mergedProductList = productList.map((item, index) => ({
+                ...item,
+                list:productDetailContent,
+                insuAgeList: [55160,73810,91530] // 5년 후, 10년 후, 15년 후 더미
+            }))
+
+            // 기본형, 고급형 더미데이터 mergedProductList 데이터 수정하면  변경됨
+            const tabMergedProductList = {
+                basic: {data:mergedProductList, type:'basic'},
+                advanced: {data:mergedProductList, type:'advanced'},
+            }
+
+            function selectType(type) {
+                selectedList = tabMergedProductList[type]
+            }
+
+            function render({type, index}) {
+                const boxItems = selectedList.data.map((item, index) => {
+                    return `<li class="list_item ${index === 0 ? 'active' : ''}">
+                                <img class="logo" src="./assets/images/logo/${item.compyCd}_s.png" />
+                                <div class="company">
+                                    <span class="name01 fw700">${item.compyCd}</span>
+                                    <span class="name02">${item.compyNm}</span>
+                                </div>
+                                <div class="info">
+                                    <p class="detail">원더◇◇◇</p>
+                                    <span class="price fw700">월 ${Number(item.premiums).toLocaleString()} 원</span>
+                                </div>
+                            </li>`
+                    })
+                // 화면에 3개만 보여서 3개로 배열 자름
+                $(`.${type} .list_wrap`).html(boxItems.slice(0,3))
+                renderDetailList(index)
+                $(`body .${type} .list_item`).on('click', function() {
+                    const index = $(`.${type} .list_item`).index(this)
+                    $(`body .${type} .list_item`).removeClass('active');
+                    $(`body .${type} .list_item`).eq(index).addClass('active');
+                    renderDetailList(index)
+                })
+            }
+
+            function renderDetailList(index) {
+                const selectedDetailList = selectedList.data[index]
+                const content = selectedDetailList.list.map((item) => {
+                        return `<tr>
+                                    <td class="text_left">${item.cntrcName}</td>
+                                    <td class="text_right">${Number(item.guidePremium).toLocaleString()} 만원</td>
+                                    <td class="text_right">${Number(item.premium).toLocaleString()} 원</td>
+                                </tr>`
+                    }).join('')
+                const template = `<ul class="list_wrap">
+                            <li class="list_item fw700">| ${selectedDetailList.prdtName}</li>
+                            <li class="list_item fw700">| ${selectedDetailList.productDetailName}</li>
+                            <li class="list_item fw700">| ${selectedDetailList.conditions}</li>
+                        </ul>
+                        <table>
+                            <caption class="blind">조회결과 상세</caption>
+                            <colgroup>
+                                <col style="width: 40%;" />
+                                <col style="width: 30%;" />
+                                <col style="width: 30%;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text_left">담보명</th>
+                                    <th scope="col" class="text_right">가입금액</th>
+                                    <th scope="col" class="text_right">단가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${content}
+                            </tbody>
+                        </table>
+                        <div class="join_wrap">
+                            <p class="tit fs16 fw600">잠깐! 보험 가입은 빠를수록 좋아요</p>
+                            <p class="text fw600">해당 상품의 평균 보험료를 고객님 조회 기준으로 나타낸 수치입니다. 예시 금액으로 실제 가입 내역에 따라 달라질 수 있습니다</p>
+                            <div class="img_wrap">
+                                <span class="bubble1 bubble">${selectedDetailList.insuAgeList[0].toLocaleString()} 원</span>
+                                <span class="bubble2 bubble">${selectedDetailList.insuAgeList[1].toLocaleString()} 원</span>
+                                <span class="bubble3 bubble">${selectedDetailList.insuAgeList[2].toLocaleString()} 원</span>
+                                <span class="img_join"></span>
+                            </div>
+                        </div>`                
+                $('.selec_result.detail').html(template)
+            }
+
+            function clickSelectedType(type) {
+                selectType(type);
+                $('.tap_nav li').on('click', function(e) {
+                    const isBaiscType = $(this).hasClass('basic');
+                    if(isBaiscType) {
+                        selectType('basic')
+                        render({type:'basic', index: 0});
+                    } else {
+                        selectType('advanced')
+                        render({type:'advanced', index: 0});
+                    }
+                })
+            }
+            
+            function init() {
+                clickSelectedType('basic');
+                render({type: 'basic', index: 0});
+            }
+
+            init();
+
+            $('.finish_btn').click(function() {
+                location.href="./complete01.html"
+            })
+        })
+    </script>
+</body>
+
+</html>

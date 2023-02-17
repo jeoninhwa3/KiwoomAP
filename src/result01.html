@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키움에셋플래너</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="wrap" class="wrap result_wrap">
+        <header>
+            <button type="button" class="header_btn header_btn_back" onclick="location.href = document.referrer;"></button>
+            <h1 class="header_tit">보험비교견적</h1>
+            <button type="button" class="header_btn header_btn_close"></button>
+        </header>
+        <!-- //header -->
+
+        <!-- 상세화면 -->
+        <main id="container" class="result detail none-padding">
+            <p class="notice_tit">키움에셋플래너 심의필 제2301001호 (2023.01.03 ~ 2024.01.02) <br>
+                초간단 비교견적은 키움에셋플래너가 제공합니다.</p>
+
+            <div class="main_content">
+                <div class="result_container">
+                    <p class="main_tit">최저, 최고 <br> 보험료 비교하기!</p>
+                    <p class="fs16 text fw700">전체 12개 상품을 비교한 결과입니다</p>
+                    <div class="tooltip">
+                        <p class="tooltip_text fs16">월 보험료가 가장 저렴한 상품 TOP 5 입니다.</p>
+                    </div>
+                    <!-- 2022-12-29 tag 클래스 추가  -->
+                    <div class="hashtag">
+                        <!-- <span class="fw700 tag01"># 건강종합(손보)</span>
+                        <span class="fw700 tag02"># 20년 납</span><br>
+                        <span class="fw700 tag03"># 저해지</span> -->
+                    </div>
+                    <div class="premium_box">
+                        <ul class="list_wrap">
+                            <li class="list_item monthly_premium">
+                                <dt class="fw600">월 보험료</dt>
+                                <dd>
+                                    <dl>
+                                        <dt>↓최저</dt>
+                                        <dd class="fw600 data1 lowest">0 원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>↑최고</dt>
+                                        <dd class="fw600 data2 highest">0 원</dd>
+                                    </dl>
+                                </dd>
+                            </li>
+                            <li class="list_item total_premium">
+                                <dt class="fw600">총 납입 보험료</dt>
+                                <dd>
+                                    <dl>
+                                        <dt>↓최저</dt>
+                                        <dd class="fw600 data3 lowest">0 원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>↑최고</dt>
+                                        <dd class="fw600 data4 highest">0 원</dd>
+                                    </dl>
+                                </dd>
+                            </li>
+                        </ul>
+                        <div class="difference">
+                            <em class="fw600">비교<br>차액</em>
+                            <span class="fw600 difference_monthly_premium">0 원</span>
+                            <strong class="fw600 difference_total_premium">0 원</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="result_container">
+                    <!-- 2022-12-20 버튼 스타일 변경 -->
+                    <div class="btn_check">
+                        <button type="button"></button>
+                        <p class="insuranceChoice">선택하기</p>
+                    </div>
+                    <div class="selec_box product_list">
+                        <ul class="list_wrap three">
+                            <!-- <li class="list_item accor">
+                                <div class="con">
+                                    <img class="logo" src="./assets/images/logo/logo_01.png" />
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>                                
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-1" class="chk05">
+                                    <label for="chk05-1" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                            <div class="content">
+                               <div class="selec_result on">
+                                   <ul class="list_wrap">
+                                       <li class="list_item tit fw700">건강◇◇◇ ◇◇ ◇◇◇ 플러스 보험..</li>
+                                       <li class="list_item text1 fw700">일반해지_프리미엄골드클래스_납면적용</li>
+                                       <li class="list_item text2 fw700">최저가입조건 | 기본계약 상해사망후유 20~ 100% 100만</li>
+                                   </ul>
+                                   <div class="table_wrap">
+                                       <table>
+                                           <caption class="blind">조회결과 상세</caption>
+                                           <colgroup>
+                                               <col style="width: 40%;" />
+                                               <col style="width: 30%;" />
+                                               <col style="width: 30%;" />
+                                           </colgroup>
+                                           <thead>
+                                               <tr>
+                                                   <th scope="col" class="text_left">담보명</th>
+                                                   <th scope="col" class="text_right">가입금액</th>
+                                                   <th scope="col" class="text_right">단가</th>
+                                               </tr>
+                                           </thead>
+                                           <tbody>
+                                               <tr>
+                                                   <td class="text_left">상해 후유장해</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">상해사망</td>
+                                                   <td class="text_right">1,000 만원</td>
+                                                   <td class="text_right">500 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">상해사망</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">담보명</td>
+                                                   <td class="text_right">1,000 만원</td>
+                                                   <td class="text_right">600 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">담보명</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                           </tbody>
+                                       </table>
+                                   </div>
+                               </div>
+                           </div>
+                            <li class="list_item accor">
+                                <div class="con">
+                                    <img class="logo" src="./assets/images/logo/logo_02.png" />
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇◇◇◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-2" class="chk05">
+                                    <label for="chk05-2" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                            <div class="content">
+                               <div class="selec_result on">
+                                   <ul class="list_wrap">
+                                       <li class="list_item tit fw700">건강◇◇◇ ◇◇ ◇◇◇ 플러스 보험.</li>
+                                       <li class="list_item text1 fw700">일반해지_프리미엄골드클래스_납면적용</li>
+                                       <li class="list_item text2 fw700">최저가입조건 | 기본계약 상해사망후유 20~ 100% 100만</li>
+                                   </ul>
+                                   <div class="table_wrap">
+                                       <table>
+                                           <caption class="blind">조회결과 상세</caption>
+                                           <colgroup>
+                                               <col style="width: 40%;" />
+                                               <col style="width: 30%;" />
+                                               <col style="width: 30%;" />
+                                           </colgroup>
+                                           <thead>
+                                               <tr>
+                                                   <th scope="col" class="text_left">담보명</th>
+                                                   <th scope="col" class="text_right">가입금액</th>
+                                                   <th scope="col" class="text_right">단가</th>
+                                               </tr>
+                                           </thead>
+                                           <tbody>
+                                               <tr>
+                                                   <td class="text_left">상해 후유장해</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">상해사망</td>
+                                                   <td class="text_right">1,000 만원</td>
+                                                   <td class="text_right">500 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">상해사망</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">담보명</td>
+                                                   <td class="text_right">1,000 만원</td>
+                                                   <td class="text_right">600 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">담보명</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                           </tbody>
+                                       </table>
+                                   </div>
+                               </div>
+                           </div>
+                            <li class="list_item accor">
+                                <div class="con">
+                                    <img class="logo" src="./assets/images/logo/logo_03.png" />
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>                                
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-3" class="chk05">
+                                    <label for="chk05-3" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                            <div class="content">
+                               <div class="selec_result on">
+                                   <ul class="list_wrap">
+                                       <li class="list_item tit fw700">건강◇◇◇ ◇◇ ◇◇◇ 플러스 보험.</li>
+                                       <li class="list_item text1 fw700">일반해지_프리미엄골드클래스_납면적용</li>
+                                       <li class="list_item text2 fw700">최저가입조건 | 기본계약 상해사망후유 20~ 100% 100만</li>
+                                   </ul>
+                                   <div class="table_wrap">
+                                       <table>
+                                           <caption class="blind">조회결과 상세</caption>
+                                           <colgroup>
+                                               <col style="width: 40%;" />
+                                               <col style="width: 30%;" />
+                                               <col style="width: 30%;" />
+                                           </colgroup>
+                                           <thead>
+                                               <tr>
+                                                   <th scope="col" class="text_left">담보명</th>
+                                                   <th scope="col" class="text_right">가입금액</th>
+                                                   <th scope="col" class="text_right">단가</th>
+                                               </tr>
+                                           </thead>
+                                           <tbody>
+                                               <tr>
+                                                   <td class="text_left">상해 후유장해</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">상해사망</td>
+                                                   <td class="text_right">1,000 만원</td>
+                                                   <td class="text_right">500 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">상해사망</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">담보명</td>
+                                                   <td class="text_right">1,000 만원</td>
+                                                   <td class="text_right">600 원</td>
+                                               </tr>
+                                               <tr>
+                                                   <td class="text_left">담보명</td>
+                                                   <td class="text_right">2,000 만원</td>
+                                                   <td class="text_right">100 원</td>
+                                               </tr>
+                                           </tbody>
+                                       </table>
+                                   </div>
+                               </div>
+                           </div> -->
+                        </ul>
+                    </div>
+
+                    <div class="btn_wrap white more">
+                        <button type="button" class="fw700 fs16">더보기</button>
+                    </div>
+                    <div class="text_wrap">
+                        <p class="text">직접 상품을 선택한 후, 아래 <strong class="fw700">비교 버튼</strong>을 눌러보세요. <br>
+                             보장 범위와 월 보험료를 비교하세요. <br>
+                            <span>(3개까지 가능)</span>
+                        </p>
+                    </div>
+                    <div class="tip_wrap">
+                        <ul class="list_wrap">
+                            <li class="list_item tit fw700">Tip 비교견적 결과 알아두세요!</li>
+                            <li class="list_item">· 조회 결과는 고객님의 기본 정보만으로 계산하여, 실제 보험료와 다를 수 있습니다.</li>
+                            <li class="list_item">· 금융소비자보호법으로 인하여 보험사명과 상품명을 전체 공개할 수 없습니다.</li>
+                            <li class="list_item">· 일부 상품의 경우 나이, 병력 등으로 인해 가입이 어려울 수 있습니다.</li>
+                            <li class="list_item">· 전문가 설계를 통해 더 다양하고 상세한 상품 견적을 받을 수 있습니다.</li>
+                            <li class="list_item">· 보험 가입 시, 개별 약관 확인이 꼭 필요하며 전문가 설계를 통해 전문가와 먼저 상의하시길 바랍니다.</li>
+                        </ul>
+                    </div>
+                    <div class="service_btn">
+                        <div class="large" onclick="javascript:alert('이동')">
+                            <p type="button fw600">상세비교를 원하시나요? <br>
+                                무료로 받아보는 전문가 설계 신청하기
+                            </p>
+                            <div class="btn_wrap">
+                                <button type="button" class="btn_close"></button>
+                            </div>
+                        </div>
+                        <div class="small">
+                            <p>전문가<br>설계</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main> 
+        <!-- //main-->
+
+        <!-- 비교선택하기 -->
+        <!-- <main id="container" class="result type01 none-padding">
+            <p class="notice_tit">키움에셋플래너 심의필 제2301001호 (2023.01.03 ~ 2024.01.02) <br>
+                초간단 비교견적은 키움에셋플래너가 제공합니다.</p>
+
+            <div class="main_content">
+                <div class="result_container">
+                    <p class="main_tit">최저, 최고 <br> 보험료 비교하기!</p>
+                    <p class="fs16 text fw700">전체 12개 상품을 비교한 결과입니다</p>
+                    <div class="tooltip">
+                        <p class="tooltip_text fs16">월 보험료가 가장 저렴한 상품 TOP 5 입니다.</p>
+                    </div>
+                    <div class="hashtag">
+                        <span class="fw700 tag01"># 건강종합(손보)</span>
+                        <span class="fw700 tag02"># 20년 납</span><br>
+                        <span class="fw700 tag03"># 저해지</span>
+                    </div>
+                    <div class="premium_box">
+                        <ul class="list_wrap">
+                            <li class="list_item">
+                                <dt class="fw600">월 보험료</dt>
+                                <dd>
+                                    <dl>
+                                        <dt>↓최저</dt>
+                                        <dd class="fw600 data1">152,465 원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>↑최고</dt>
+                                        <dd class="fw600 data2">181,980 원</dd>
+                                    </dl>
+                                </dd>
+                            </li>
+                            <li class="list_item">
+                                <dt class="fw600">총 납입 보험료</dt>
+                                <dd>
+                                    <dl>
+                                        <dt>↓최저</dt>
+                                        <dd class="fw600 data3">36,591,600 원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>↑최고</dt>
+                                        <dd class="fw600 data4">43,675,200 원</dd>
+                                    </dl>
+                                </dd>
+                            </li>
+                        </ul>
+                        <div class="difference">
+                            <em class="fw600">비교<br>차액</em>
+                            <span class="fw600">29,515 원</span>
+                            <strong class="fw600">7,083,600 원</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result_container">
+                    <div class="btn_check">
+                        <button type="button"></button>
+                    </div>
+
+                    <div class="selec_box">
+                        <ul class="list_wrap">
+                            <li class="list_item">
+                                <div class="con">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-1" class="chk05">
+                                    <label for="chk05-1" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                            <li class="list_item">
+                                <div class="con">
+                                    <div class="img" style="background-color: #EF8F00;"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-2" class="chk05">
+                                    <label for="chk05-2" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                            <li class="list_item">
+                                <div class="con">
+                                    <div class="img" style="background-color: #B67FED;"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">D◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-3" class="chk05">
+                                    <label for="chk05-3" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                            <li class="list_item">
+                                <div class="con">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">H◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-4" class="chk05">
+                                    <label for="chk05-4" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                            <li class="list_item">
+                                <div class="con">
+                                    <div class="img"></div>
+                                    <div class="company">
+                                        <span class="name01 fw700">S◇◇</span>
+                                        <span class="name02">손해보험</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <span class="condition fw600">보유담보</span>
+                                            <span class="count fw600">5개</span>
+                                        </div>
+                                        <span class="price fw700">월 41,500 원</span>
+                                    </div>
+                                </div>
+                                <div class="check_box">
+                                    <input type="checkbox" id="chk05-5" class="chk05">
+                                    <label for="chk05-5" class="fs16 agree__detail"></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="result_container">
+                    <div class="btn_wrap white">
+                        <button type="button" class="fw700 fs16">더보기</button>
+                    </div>
+                    <div class="text_wrap">
+                        <p class="text">직접 상품을 선택한 후, 아래 <strong class="fw700">비교 버튼</strong>을 눌러보세요. <br>
+                             보장 범위와 월 보험료를 비교하세요. <br>
+                            <span>(3개까지 가능)</span>
+                        </p>
+                    </div>
+                    <div class="tip_wrap">
+                        <ul class="list_wrap">
+                            <li class="list_item tit fw700">Tip 비교견적 결과 알아두세요!</li>
+                            <li class="list_item">· 조회 결과는 고객님의 기본 정보만으로 계산하여, 실제 보험료와 다를 수 있습니다.</li>
+                            <li class="list_item">· 금융소비자보호법으로 인하여 보험사명과 상품명을 전체 공개할 수 없습니다.</li>
+                            <li class="list_item">· 일부 상품의 경우 나이, 병력 등으로 인해 가입이 어려울 수 있습니다.</li>
+                            <li class="list_item">· 전문가 설계를 통해 더 다양하고 상세한 상품 견적을 받을 수 있습니다.</li>
+                            <li class="list_item">· 보험 가입 시, 개별 약관 확인이 꼭 필요하며 전문가 설계를 통해 전문가와 먼저 상의하시길 바랍니다.</li>
+                        </ul>
+                    </div>
+                      <div class="service_btn">
+                        <p type="button fw600">상세비교를 원하시나요? <br>
+                            무료로 받아보는 전문가 설계 신청하기
+                        </p>
+                        <div class="btn_wrap">
+                            <button type="button" class="btn_close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main> -->
+        <!-- //main -->
+
+        <footer>
+            <div class="btn_wrap full_h60">
+                <button type="button" class="compare_products btn_type_main fw700 fs16">상품 비교하기</button>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- popup -->
+        <!-- 전문가 설계 신청 팝업 -->
+        <div class="popup result01_popup">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <p class="fw700 tit">보험료 상세 비교를<br>받아 보시겠어요?</p>
+                <p class="text fs16">보험 전문가 상담 & 비교견적서<br>수령이 가능합니다.</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16">동의</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 비교체크 확인 팝업 -->
+        <div class="popup result01_popup max">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span class="fs16">안내</span>
+                <strong class="fw600 fs16">비교할 상품을 체크하세요</strong>
+                <p class="fs16">최소 1개 ~ 최대 3개까지 선택 가능합니다</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main closePopup fw700 fs16">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 보장범위 확인 팝업 -->
+        <div class="popup result01_popup">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span class="fs16">안내</span>
+                <strong class="fw600 fs16">보장 범위가 달라요!</strong>
+                <p class="fs16">각 상품 기준으로 비교하세요</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main closePopup fw700 fs16">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 담보가 없을 경우 -->
+        <div class="popup result01_popup">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span class="fs16">안내</span>
+                <strong class="fw600 fs16">고급형 담보가 없어요!</strong>
+                <p class="fs16">기본형만 구성된 보험종류입니다</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main closePopup fw700 fs16">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- //popup -->
+    </div>
+    <!-- //wrap -->
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dist/common.js"></script>
+    <script>
+        $(function() {
+            // $.ajax({
+            //     type: 'POST',
+            //     url: './assets/result1.json',
+            //     dataType: 'json',
+            //     async: false,
+            //     data: _data,
+            //     beforeSend: function(xhr) {},
+            //     complete: function(request,status) {}
+            // }).done(function(data, textStatus, jqXHR) {
+            //     console.log(data)
+            // }).fail(function(jqXHR, textStatus) {
+            //     alert('textStatus: ' + textStatus);
+            //     return;
+            // });
+
+            // API 문서, 파일 매핑 되지 않음
+            // dummy json으로 데이터 작업
+
+        
+
+            let originalProductList
+            let productList
+
+            // 플랜코드에_해당하는_플랜상품목록_및_보험료_수신
+            $.getJSON( "./assets/json/result1.json", function( data ) {
+                console.log('플랜코드에_해당하는_플랜상품목록_및_보험료_수신 DUMMY API GET')
+                console.log(data);
+                originalProductList = data.planProductInfoList[0].planProductList;
+                productList = originalProductList.map((item, index) => {
+                    return `<li class="list_item accor" data-index=${index}>
+                        <div class="list_item_top">
+                            <div class="con">
+                                <img class="logo" src="./assets/images/logo/${item.compyCd}.png" />
+                                <div class="company">
+                                    <span class="name01 fw700">${item.compyCd}</span>
+                                    <span class="name02">${item.compyNm}</span>
+                                </div>
+                                <div class="info">
+                                    <div class="row">
+                                        <span class="condition fw600">보유담보</span>
+                                        <span class="count fw600">5 개</span>
+                                    </div>
+                                    <span class="price fw700">월 ${Number(item.premiums).toLocaleString()} 원</span>
+                                </div>
+                            </div>                                
+                            <div class="check_box">
+                                <input type="checkbox" id="chk05-${index}" class="chk05">
+                                <label for="chk05-${index}" class="fs16 agree__detail"></label>
+                            </div>
+                        </div>
+                    </li>`
+                })
+                // $('.product_list .list_wrap').html([...productList].slice(0,3));
+                $('.product_list .list_wrap').html(productList);
+            });
+
+            // 더보기 클릭
+            $('.more').click(function() {
+                $('.product_list .list_wrap').removeClass('three');
+                $('.more').hide();
+            })
+
+            // result1, result2 보험 상품 클릭
+            $('.product_list .list_wrap').on('click', '.con', function(e) {
+                let selectedCompnay = $(this).find('.name01').text()
+                const parent = $(this).closest('.list_item')
+                const index = $(this).closest('.list_item').attr('data-index')
+                const isExistChild = parent.find('.list_item_bottom').length
+                if(isExistChild > 0) return;
+                // 플랜상품_보험료_정보_수신
+                $.getJSON( "./assets/json/result2.json", function( data ) {
+                    console.log('플랜상품 보험료 정보 수신 DUMMY API GET')
+                    const list = data.premiumsPlanProudctInfoList[0].premiumsPlanProudctList
+                    const result = {
+                        ...originalProductList.filter((item) => item.compyCd === selectedCompnay)[0],
+                        list
+                    }
+                    originalProductList[index] = {...originalProductList[index], list}
+                    const content = result.list.map((item) => {
+                        return `<tr>
+                                    <td class="text_left">${item.cntrcName}</td>
+                                    <td class="text_right">${Number(item.guidePremium).toLocaleString()} 만원</td>
+                                    <td class="text_right">${Number(item.premium).toLocaleString()} 원</td>
+                                </tr>`
+                    }).join('')
+                    const templateResult = `<div class="content list_item_bottom">
+                        <div class="selec_result on">
+                            <ul class="list_wrap">
+                                <li class="list_item tit fw700">${result.prdtName}</li>
+                                <li class="list_item text1 fw700">${result.productDetailName}</li>
+                                <li class="list_item text2 fw700">최저가입조건 | ${result.conditions}</li>
+                            </ul>
+                            <div class="table_wrap">
+                                <table>
+                                    <caption class="blind">조회결과 상세</caption>
+                                    <colgroup>
+                                        <col style="width: 40%;" />
+                                        <col style="width: 30%;" />
+                                        <col style="width: 30%;" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="text_left">담보명</th>
+                                            <th scope="col" class="text_right">가입금액</th>
+                                            <th scope="col" class="text_right">단가</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${content}
+                                    </tbody>
+                                    </table>
+                                   </div>
+                               </div>
+                           </div>`
+                           parent.append(templateResult)
+                    });
+            })
+
+            // 선택하기 클릭
+            $('.insuranceChoice').click(function() {
+                console.log('선택하기')
+                $('.list_wrap .check_box').show();
+            })
+
+            // 상품 비교하기 클릭
+            $('.compare_products').click(function() {
+                console.log('상품 비교하기 클릭')
+                // let nextProudctList = []
+                const isDisplayedCheckBox = $('.list_wrap .check_box').is(":visible")
+                console.log({isDisplayedCheckBox})
+                if(!isDisplayedCheckBox) {
+                    $('.list_wrap .check_box').show();
+                    return;
+                }
+                // 체크 박스 확인
+                const checkedList = $('.chk05').filter((index, item) => {
+                    return item.checked
+                })
+
+                if(checkedList.length <= 0) {
+                    $('.result01_popup.max').addClass('active');
+                    return;
+                }
+                location.href='result03.html';
+            })
+
+            $('.product_list .list_wrap').on('click', '.chk05', function(e) {
+                const length = $('.chk05:checked').length
+                if(length > 3) {
+                    $('.result01_popup.max').addClass('active');
+                    $(this).prop('checked', false)
+                    return
+                } 
+            })
+
+            // $('input[type=checkbox]').click(function() {
+            //     console.log('123');
+            // })
+            // $('.check_box').on('change',function() {
+            //     console.log('click')
+            //     // if(this.checked) {
+            //     //     var returnVal = confirm("Are you sure?");
+            //     //     $(this).prop("checked", returnVal);
+            //     // }
+            //     // $('#textbox1').val(this.checked);        
+            // });
+            
+
+            // ajax로 데이터 호출 후 hashtag 배열을 list에 넣어준다.
+            // hashtag 데이터 연동
+            function createHashtag(list) {
+                const hashtagElement = list.map((item, index) => {
+                    return `<span class="fw700 tag0${index+1}"># ${item}</span>`
+                })
+                $('.hashtag').html(hashtagElement)
+            }
+            createHashtag(['건강종합(손보)','20년 납','저해지'])
+
+            // 월 보험료, 총 납임 보험료 데이터 연동
+            // lmp 최저 월 보험료
+            // hmp 최고 월 보험료
+            // ltp 최저 총 납입 보험료
+            // htp 최고 총 납입 보험료
+            function inputPremium(lmp, hmp, ltp, htp) {
+                const lowestMonthlyPremium = lmp
+                const highestMonthlyPremium = hmp
+                const lowestTotalPremium = ltp
+                const highestTotalPremium = htp
+                const differenceMonthlyPremium = highestMonthlyPremium - lowestMonthlyPremium 
+                const differenceTotalPremium = highestTotalPremium - lowestTotalPremium 
+                
+                $('.monthly_premium .lowest').text(`${lowestMonthlyPremium.toLocaleString()} 원`)
+                $('.monthly_premium .highest').text(`${highestMonthlyPremium.toLocaleString()} 원`)
+                $('.total_premium .lowest').text(`${lowestTotalPremium.toLocaleString()} 원`)
+                $('.total_premium .highest').text(`${highestTotalPremium.toLocaleString()} 원`)
+                $('.difference_monthly_premium').text(`${differenceMonthlyPremium.toLocaleString()} 원`)
+                $('.difference_total_premium').text(`${differenceTotalPremium.toLocaleString()} 원`)
+            }
+            inputPremium(152465, 181980, 36591600, 43675200);
+
+            //퀵메뉴
+            $('.service_btn .small').on('click',function(){
+                $(this).hide();
+                $('.service_btn .large').addClass('active')
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+// 테마별 색상
+$colors:(
+    light: (
+      bg1 : #568edd,
+      bg2 : #fff,
+    ),
+    mint: (
+      bg1 : #568edd,
+      bg2 : #fff,
+    ),
+    classic: (
+      bg1 : #568edd,
+      bg2 : #fff,
+    ),
+    dark: (
+      bg1 : #121212,
+      bg2 : #333,
+    )
+);
+@function func_color($key, $type: 'light'){
+  @each $name, $color in map-get($colors, $type){
+    @if($key == $name){
+      @return $color;
+    }
+  }
+}
+@mixin color($property,$color){
+  #{$property}: func_color($color);
+  @at-root body.mint & {
+    #{$property}: func_color($color, mint);
+  }
+  @at-root body.classic & {
+    #{$property}: func_color($color, classic);
+  }
+  @at-root body.dark & {
+    #{$property}: func_color($color, dark);
+  }
+}
+@mixin gradient_color(){
+  background: linear-gradient(180deg, rgba(86,142,221,0) 0%, rgba(86,142,221,1) 33%, rgba(86,142,221,1) 100%);
+  @at-root body.dark & {
+    background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 33%, rgba(18,18,18,1) 100%);
+  }
+  // transition: all 0.6s;
+}
+
+
+@mixin bgImg($lightUrl,$darkUrl:null,$width:null,$height:null) {
+  background-image: url($lightUrl);
+  width: $width;
+  height: $height;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @at-root body.dark & {
+    background-image: url($darkUrl);
+  }
+}

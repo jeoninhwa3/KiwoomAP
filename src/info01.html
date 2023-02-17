@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키움에셋플래너</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <header>
+            <button type="button" class="header_btn header_btn_back" onclick="location.href = document.referrer;"></button>
+            <h1 class="header_tit">보험 비교견적</h1>
+            <button type="button" class="header_btn header_btn_close"></button>
+        </header>
+        <!-- //header -->
+
+        <main id="container" class="info-input none-padding">
+            <p class="notice_tit">키움에셋플래너 심의필 제2301001호 (2023.01.03 ~ 2024.01.02) <br>
+                초간단 비교견적은 키움에셋플래너가 제공합니다.</p>
+            <div class="progress_bar step1">
+                <p></p>
+            </div>
+
+            <div class="main_content">
+                <div class="info_page info_page01" style="display: block;">
+                    <p class="main_tit">이름을 <br> 알려주세요</p>
+                    <p class="fs16 text">정확한 견적 정보가 필요해요</p>
+                    <div class="input_box">
+                        <input type="text" class="userName" placeholder="이름을 입력해주세요" required value="" maxlength="8" onkeydown="keyDownNameCheck(event)">
+                    </div>
+                    <div class="btn_wrap full_h60">
+                        <button type="button" class="btn_type_blue fw700 fs16"  onclick="nameCheck()">입력완료</button>
+                    </div>
+                    <p class="notice">고객님의 정보는 서비스 이용 시에만 수집 · 활용합니다</p>
+                </div>
+
+                
+                <div class="info_page info_page02">
+                    <p class="main_tit">성별은 <br> 무엇일까요?</p>
+                    <p class="fs16 text">둘 중 선택해주세요</p>
+                    <ul class="list_wrap">
+                        <li class="list_item man" onclick="genderCheck('남자')"></li>
+                        <li class="list_item woman" onclick="genderCheck('여자')"></li>
+                    </ul>
+                    <p class="notice">고객님의 정보는 서비스 이용 시에만 수집 · 활용합니다</p>
+                </div>
+
+                <div class="info_page info_page03">
+                    <p class="main_tit">언제 <br> 태어났나요?</p>
+                    <p class="fs16 text">나이가 궁금해요</p>
+                    <div class="input_box">
+                        <input type="text" placeholder="19810520" maxlength="8" required class="userbirth" maxlength="8" onkeydown="keyDownBirthCehck(event)"">
+                    </div>
+                    <div class="btn_wrap full_h60">
+                        <button type="button" class="btn_type_blue fw700 fs16" onclick="birthCehck()">입력완료</button>
+                    </div>
+                    <p class="notice">고객님의 정보는 서비스 이용 시에만 수집 · 활용합니다</p>
+                </div>
+
+                <div class="info_page info_page04">
+                    <p class="main_tit">휴대폰 <br> 번호는?</p>
+                    <p class="fs16 text">연락처를 입력하세요</p>
+                    <div class="input_box">
+                        <input type="text" class="cellphone" maxlength="13" placeholder="‘-’ 제외 입력해주세요" required onkeydown="keyDownPhoneNumCehck(event)">
+                    </div>
+                    <div class="btn_wrap full_h60">
+                        <button type="button" class="btn_type_blue fw700 fs16"  onclick="phoneNumCehck()">입력완료</button>
+                    </div>
+                    <p class="notice">고객님의 정보는 서비스 이용 시에만 수집 · 활용합니다</p>
+                </div>
+            </div>
+            <!-- //main_content -->
+        </main>
+        <!-- //main -->
+    </div>
+    <!-- //wrap -->
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dist/common.js"></script>
+    <script>
+        var progressBar = $('.progress_bar').find('p'),
+        userName = $(".userName"),
+        gender = "",        
+        userbirth = $('.userbirth'),
+        userPhone = $('.cellphone'),
+        step01 = $('.info_page01'),
+        step02 = $('.info_page02'),
+        step03 = $('.info_page03'),
+        step04 = $('.info_page04');
+        // 이름 체크
+        function nameCheck(){
+            if (userName.val() == "") {
+                alert("이름을 정확히 입력해주세요.");
+                userName.focus();
+                return;
+            }
+            for (var i=0; i<userName.val().length; i++)  { 
+                var chk = userName.val().substring(i,i+1); 
+                if(chk.match(/[0-9]|[a-z]|[A-Z]/)) { 
+                    alert("이름을 정확히 입력해주세요.");
+                    userName.val('');
+                    userName.focus();
+                    return;
+                }
+                if(chk.match(/([^가-힣\x20])/i)){
+                    alert("이름을 정확히 입력해주세요.");
+                    userName.val('');
+                    userName.focus();
+                    return;
+                }
+                if(userName.val() == " "){
+                    alert("이름을 정확히 입력해주세요.");
+                    userName.val('');
+                    userName.focus();
+                    return;
+                }
+            }
+            // alert("이름은 : "+userName.val()+ "\n입력 하였습니다.")
+            step01.hide();
+            step02.show();
+            progressBar.css('width','40%');
+        }
+        // 이름 체크 엔터
+        function keyDownNameCheck(e) {
+            if(e.key === "Enter") {
+                nameCheck();
+            }
+        }
+
+        // 성별체크
+        function genderCheck(genderCk){
+            gender = genderCk;
+            // alert("성별 : "+gender+"\n선택 하였습니다.");
+            step02.hide();
+            step03.show();
+            progressBar.css('width','60%');
+        }
+        // 생년월일 유효성 검사
+        function birthCehck(){
+            var pattern = /^(19[0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
+            if(!pattern.test(userbirth.val())){
+                alert('생년월일 8자리를 입력해주세요'); 
+                userbirth.val(''); 
+                userbirth.focus(); 
+                return; 
+            }else{
+                // alert("생년월일 : "+userbirth.val()+"\n입력 하였습니다.");
+                step03.hide();
+                step04.show();
+                progressBar.css('width','80%');
+            }
+        }
+
+        // 생년월일 체크 엔터
+        function keyDownBirthCehck(e) {
+            if(e.key === "Enter") {
+                birthCehck();
+            }
+        }
+
+        // 핸드폰 유효성 검사
+        function phoneNumCehck(){
+            var regExp = /^(?:(010-\d{4})|(01[1|6|7|8|9]-\d{3,4}))-(\d{4})$/;
+            if(!regExp.test(userPhone.val())){
+                alert("휴대폰번호가 올바르지 않습니다.");
+                userPhone.val('');
+                userPhone.focus();
+                return false;
+            }
+            // alert("핸드폰번호 : "+userPhone.val()+"\n입력 하였습니다.");
+            userInforCreate();  /// date 전송
+            progressBar.css('width','100%');
+            location.href='privacy01.html';
+        }        
+
+        // 생년월일 체크 엔터
+        function keyDownPhoneNumCehck(e) {
+            if(e.key === "Enter") {
+                phoneNumCehck();
+            }
+        }
+
+        function userInforCreate(){
+            var _data = {
+				name : userName.val(),
+				gender : gender,
+                birth : userbirth.val(),
+                phone : userPhone.val(),
+            }
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:9999/UserInfo',  // 로컬로 전송 체크 json-server --watch userinfo.json --port 9999
+                dataType: 'json',
+                async: false,
+                data: _data,
+                beforeSend: function(xhr) {},
+                complete: function(request,status) {}
+            }).done(function(data, textStatus, jqXHR) {
+                console.log(data)
+            }).fail(function(jqXHR, textStatus) {
+                alert('textStatus: ' + textStatus);
+                return;
+            });
+        }
+
+    </script>
+</body>
+
+</html>

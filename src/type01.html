@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키움에셋플래너</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+    
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <header>
+            <button type="button" class="header_btn header_btn_back" onclick="location.href = document.referrer;"></button>
+            <h1 class="header_tit">보험 비교견적</h1>
+            <button type="button" class="header_btn header_btn_close"></button>
+        </header>
+        <!-- //header -->
+
+        <main id="container" class="insurance-card">
+            <p class="notice_tit">키움에셋플래너 심의필 제2301001호 (2023.01.03 ~ 2024.01.02) <br>
+                초간단 비교견적은 키움에셋플래너가 제공합니다.</p>
+
+            <div class="main_content">
+                <span class="main_subtit fs16">고객님을 위한</span>
+                <h2 class="main_tit">간편보험료 비교가<br>준비 완료되었어요</h2>
+                <p class="text">마지막으로 비교해보고 싶은<br>보험 종류를 선택하세요</p>
+                <div class="card_swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide01">
+                            <img src="./assets/images/img_card_healt01.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide02">
+                            <img src="./assets/images/img_card_healt02.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide03">
+                            <img src="./assets/images/img_card_healt03.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide04">
+                            <img src="./assets/images/img_card_healt04.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide05">
+                            <img src="./assets/images/img_card_healt05.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide06">
+                            <img src="./assets/images/img_card_healt06.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide07">
+                            <img src="./assets/images/img_card_healt07.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide08">
+                            <img src="./assets/images/img_card_healt08.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide09">
+                            <img src="./assets/images/img_card_healt09.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide09">
+                            <img src="./assets/images/img_card_healt10.png" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide10">
+                            <img src="./assets/images/img_card_healt11.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper_btn"></div>
+                    <div class="swiper-button-prev swiper_btn"></div>
+                </div>
+                <ul class="list_wrap category">
+                    <li class="list_item">전체</li>
+                    <li class="list_item">건강</li>
+                    <li class="list_item">유병자</li>
+                    <li class="list_item">어린이</li>
+                    <li class="list_item">보장</li>
+                    <li class="list_item">실손</li>
+                </ul>
+            </div>
+            <!-- //main_content -->
+        </main>
+        <!-- //main -->
+
+        <footer>
+            <div class="btn_wrap full_h60">
+                <button type="button" class="btn_type_main fw700 fs16" onclick="insuranceCheck()">보험료 확인하기</button>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- popup -->
+        <div class="popup type01_popup total ">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <ul class="list_wrap">
+                    <li class="list_item">
+                        <dl class="fw600">
+                            <dt class="health01">건강 종합(손보)</dt>
+                            <dd>일반</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="health01">건강 종합(손보)</dt>
+                            <dd>저해지</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="health01">건강 종합(생명)</dt>
+                            <dd>일반</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="health03">유병자</dt>
+                            <dd>3-2.5</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="kid01">어린이</dt>
+                            <dd>일반</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="kid01">어린이</dt>
+                            <dd>무해지</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="teeth01">치아</dt>
+                            <dd>갱신</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="operator01">운전자</dt>
+                            <dd>갱신</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="life01">종신</dt>
+                            <dd>저해지</dd>
+                        </dl>                            
+                        <dl class="fw600">
+                            <dt class="dementia01">치매</dt>
+                            <dd>일반</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="actual01">실손</dt>
+                            <dd>갱신</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="insuranceCheck('total')">보험료 확인하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup type01_popup health1">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <ul class="list_wrap">
+                    <li class="list_item">
+                        <dl class="fw600">
+                            <dt class="health01">건강 종합(손보)</dt>
+                            <dd>일반</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="health01">건강 종합(손보)</dt>
+                            <dd>저해지</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="health01">건강 종합(생명)</dt>
+                            <dd>일반</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="insuranceCheck('health1')">보험료 확인하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup type01_popup health2">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <ul class="list_wrap">
+                    <li class="list_item">
+                        <dl class="fw600">
+                            <dt class="health03">유병자</dt>
+                            <dd>3-2.5</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="insuranceCheck('health2')">보험료 확인하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup type01_popup health3">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <ul class="list_wrap">
+                    <li class="list_item">
+                        <dl class="fw600">
+                            <dt class="kid01">어린이</dt>
+                            <dd>일반</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="kid01">어린이</dt>
+                            <dd>무해지</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="insuranceCheck('health3')">보험료 확인하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup type01_popup health4">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <ul class="list_wrap">
+                    <li class="list_item">
+                        <dl class="fw600">
+                            <dt class="teeth01">치아</dt>
+                            <dd>갱신</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="operator01">운전자</dt>
+                            <dd>갱신</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="life01">종신</dt>
+                            <dd>저해지</dd>
+                        </dl>
+                        <dl class="fw600">
+                            <dt class="dementia01">치매</dt>
+                            <dd>일반</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="insuranceCheck('health4')">보험료 확인하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup type01_popup health5">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <ul class="list_wrap">
+                    <li class="list_item">
+                        <dl class="fw600">
+                            <dt class="actual01">실손</dt>
+                            <dd>갱신</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="insuranceCheck('health5')">보험료 확인하기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 보험종류 미선택 시 알럿 -->
+        <div class="popup type01_popup noCheck">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span class="fs16">안내</span>
+                <strong class="fw600 fs16">보험 종류를 선택해주세요</strong>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16 closePopup">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- //popup -->
+    </div>
+    <!-- //wrap -->
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dist/common.js"></script>
+</body>
+<script>
+    var cardBanner = $('.card_swiper .swiper-slide'),
+    popTotal = $('.popup.total'),
+    popHelth1 = $('.popup.health1'),
+    popHelth2 = $('.popup.health2'),
+    popHelth3 = $('.popup.health3'),
+    popHelth4 = $('.popup.health4'),
+    popHelth5 = $('.popup.health5'),
+    popAlert = $('.popup.noCheck'),
+    category = $('.category'),
+    insurance = "";
+    // insurance = "매칭없음" 이 입력되면 type02.html 이동
+
+    // swiper check
+    cardBanner.on('click',function(){
+        var idx = cardBanner.index(this);
+        popTotal.addClass('active');
+        category.find('li').eq(0).addClass('active')
+        popTotal.find('.list_item dl').removeClass('active');
+        popTotal.find('.list_item dl').eq(idx).addClass('active');
+        console.log(popTotal.find('.list_item dl').eq(idx).find('dt').text());
+        insurance = popTotal.find('.list_item dl').eq(idx).find('dt').text();
+    })
+    function categoryInsurance(element,listIdx,activeIdx){
+        element.addClass('active');
+        category.find('li').removeClass('active');
+        category.find('li').eq(activeIdx).addClass('active');
+        element.find('.list_item dl').removeClass('active');
+        element.find('.list_item dl').eq(listIdx).addClass('active');
+        console.log(element.find('.list_item dl').eq(listIdx).find('dt').text());
+        insurance = element.find('.list_item dl').eq(listIdx).find('dt').text();
+    }
+    // 전체카테고리
+    popTotal.find('.list_item dl').on('click',function(){
+        var idx = popTotal.find('.list_item dl').index(this);
+        categoryInsurance(popTotal,idx,0);
+    });
+    // 건강
+    popHelth1.find('.list_item dl').on('click',function(){
+        var idx = popHelth1.find('.list_item dl').index(this);
+        categoryInsurance(popHelth1,idx,1);
+    });
+    // 유병자
+    popHelth2.find('.list_item dl').on('click',function(){
+        var idx = popHelth2.find('.list_item dl').index(this);
+        categoryInsurance(popHelth2,idx,2);
+    });
+    // 어린이
+    popHelth3.find('.list_item dl').on('click',function(){
+        var idx = popHelth3.find('.list_item dl').index(this);
+        categoryInsurance(popHelth3,idx,3);
+    });
+    // 보장
+    popHelth4.find('.list_item dl').on('click',function(){
+        var idx = popHelth4.find('.list_item dl').index(this);
+        categoryInsurance(popHelth4,idx,4);
+    });
+    // 실손
+    popHelth5.find('.list_item dl').on('click',function(){
+        var idx = popHelth5.find('.list_item dl').index(this);
+        categoryInsurance(popHelth5,idx,5);
+    });
+
+
+
+    
+    function insuranceCheck(pop){
+        $('.popup'+'.'+pop).removeClass('active');
+        if(insurance =="" || insurance == 0){
+            popAlert.addClass('active');
+        }else if(insurance == "매칭없음"){
+            location.href='type02.html';
+        }else{
+            location.href='result01.html';
+        }
+    }
+</script>
+</html>

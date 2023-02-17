@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>키움에셋플래너</title>
+    <link rel="stylesheet" href="./assets/css/default.css">
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <header>
+            <button type="button" class="header_btn header_btn_back" onclick="location.href = document.referrer;"></button>
+            <h1 class="header_tit">보험 비교견적</h1>
+            <button type="button" class="header_btn header_btn_close"></button>
+        </header>
+        <!-- //header -->
+
+        <main id="container" class="privacy none-padding">
+            <p class="notice_tit">키움에셋플래너 심의필 제2301001호 (2023.01.03 ~ 2024.01.02) <br>
+                초간단 비교견적은 키움에셋플래너가 제공합니다.</p>
+
+            <div class="main_content">
+                <div class="main_box">
+                    <p class="main_tit">간편 보험료 비교를 위한 <br> 동의가 필요해요</p>
+                    <p class="fs16 text">이제 거의 다 왔어요</p>
+                    <div class="agree_wrap">
+                        <p class="agree__tit">[필수] 개인정보 수집·이용 및 제공 동의</p>
+                        <div class="check_box">
+                            <input type="checkbox" id="chk01-1" class="chk01 type01">
+                            <label for="chk01-1" class="fs16 agree__detail">위 내용을 확인했으며, 동의 합니다</label>
+                        </div>
+                    </div>
+                    <div class="agree_wrap">
+                        <p class="agree__tit">[선택] 마케팅 수집·이용 및 활용 동의</p>
+                        <div class="check_box">
+                            <input type="checkbox" id="chk01-2" class="chk01 option">
+                            <label for="chk01-2" class="fs16 agree__detail">위 내용을 확인했으며, 동의 합니다</label>
+                        </div>
+                        <div class="check_box">
+                            <input type="checkbox" id="chk01-3" class="chk01 option">
+                            <label for="chk01-3" class="fs16 agree__detail">아니오. 동의하지않습니다.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub_box">
+                    <ul class="list_wrap">
+                        <li class="list_item">| 필수 안내사항 |</li>
+                        <li class="list_item">1. 보험계약 체결 전에 상품설명서 및 약관을 읽어 보시기 바랍니다.</li>
+                        <li class="list_item">2. 키움에셋플래너㈜ 및 소속 보험설계사는 제휴 보험사 상품에 대해 충분히 설명할 의무가 있으므로 가입자는 가입에 앞서 이에 대한 충분한 설명을 받으시기 바랍니다.</li>
+                        <li class="list_item">3. 키움에셋플래너㈜는 다수의 보험사에 대한 보험계약 체결을 대리하는 법인보험대리점이며 
+                            계약체결권을 부여받지 아니한 금융상품에 대해서는 계약을 체결할 권한이 없습니다. (보험대리점협회등록번호 2003058232)</li>
+                        <li class="list_item">4. 키움에셋플래너㈜ 및 소속 보험설계사는 고의 또는 과실로 금융소비자보호에관한법률을 위반하여 
+                            금융소비자에게 손해를 발생시킨 경우 그 손해를 배상할 책임이 있습니다. 다만, 키움에셋플래너㈜ 및 소속 보험설계사가 고의 및 과실이 없음을 입증한 경우에는 그러하지 아니합니다.</li>
+                        <li class="list_item">5. 본 광고는 키움에셋플래너(주) 광고심의기준을 준수하였으며, 유효 기간은 심의일로부터 1년입니다.</li>
+                        <li class="list_item">키움에셋플래너 심의필 제2301001호 (2023.01.03 ~ 2024.01.02)</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //main_content -->
+        </main>
+        <!-- //main -->
+
+        <footer>
+            <div class="btn_wrap full_h60">
+                <button type="button" class="btn_type_main fw700 fs16" onclick="privacyCheck();">확인</button>
+            </div>
+        </footer> 
+        <!-- //footer -->
+
+        <!-- popup -->
+        <div class="popup privacy01_popup type1">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close personal"></button>
+                </div>
+                <p class="subtit fs16">[필수] 개인정보 수집·이용 및 제공 동의</p>
+                <ul class="text_wrap">                   <li class="list_item">1) 수집목적 : 보험 비교견적 조회 및 견적서 안내, 가입 상담, 금융상품 판매</li>
+                    <li class="list_item">2) 수집항목 : 이름, 성별, 생년월일, 연락처, 거주지역, 보험 종류</li>
+                    <li class="list_item">3) 보유기간 : 제공일로부터 1년간</li>
+                    <li class="list_item">4) 동의거부할권리 : 개인정보 수집·이용 및 제공 동의를 거부할 권리가 있습니다. 
+                        다만, 동의를 거부할 경우, 비교견적 서비스를 이용할 수 없습니다.</li>
+                </ul>
+                <p class="text_wrap">※ 동의 받은 개인정보는 키움에셋플래너㈜의 책임과 관리하에 운영되고 있습니다. 
+                    자세한 <span><a href="https://kiwoomap.com/cs_center/cust_policy.html" target="_blank">개인정보처리방침</a></span>은 홈페이지에서도 확인할 수 있습니다.</p>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="pesnalCheck();">동의</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup privacy01_popup type2">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close marketing"></button>
+                </div>
+                <p class="subtit fs16">[선택] 마케팅 수집·이용 및 활용 동의</p>
+                <ul class="text_wrap">
+                    <li class="list_item">1) 수집목적 <br>
+                        - 맞춤 상품 추천, 광고성 정보 제공, 이벤트 참여 및 경품 지급<br>
+                        - 마케팅 활용을 위한 DB 관리, 신규 서비스 안내</li>
+                    <li class="list_item">2) 수집항목 : 이름, 성별, 생년월일, 연락처, 거주지역</li>
+                    <li class="list_item">3) 보유기간 : 제공일로부터 1년간 혹은 철회 시까지</li>
+                    <li class="list_item">4) 동의거부할권리 : 마케팅 수집·이용 및 활용 동의를 거부할 권리가 있습니다. 
+                        다만, 동의를 거부할 경우, 맞춤 상품 추천, 광고성 정보 제공, 이벤트 참여 및 경품 지급, 
+                        마케팅 활용을 위한 DB 관리, 신규 서비스 안내 등 수집 목적에 대한 혜택을 제공 받을 수 없습니다. 
+                        동의 후에도 언제든지 철회 요청이 가능합니다. </li>
+                </ul>
+                <!-- 2022-12-19 텍스트 수정 -->
+                <p class="text_wrap">※ 동의 받은 개인정보는 키움에셋플래너㈜의 책임과 관리하에 운영되고 있습니다. 
+                    자세한 <span><a href="https://kiwoomap.com/cs_center/cust_policy.html" target="_blank">개인정보처리방침</a></span>은 홈페이지에서도 확인할 수 있습니다.</p>
+                <div class="btn_wrap two_btn">
+                    <button type="button" class="btn_type_negative fw700 fs16" onclick="marketingCheck(0);">동의 안 함</button>
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="marketingCheck(1);">동의</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 필수 선택 미체크시 팝업 -->
+        <div class="popup privacy01_popup type3">
+            <div class="dim"></div>
+            <div class="popup_container">
+                <div class="btn_wrap">
+                    <button type="button" class="btn_close"></button>
+                </div>
+                <span class="fs16">안내</span>
+                <strong class="fw600 fs16">필수 항목에 동의가 필요합니다</strong>
+                <div class="btn_wrap full_h60">
+                    <button type="button" class="btn_type_main fw700 fs16" onclick="pesnalCheck();">동의</button>
+                </div>
+            </div>
+        </div>
+        <!-- //popup -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="./assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dist/common.js"></script>
+    <script>
+        //popup privacy
+        var privacy = $('.privacy01_popup'),
+        ckBox = $('.chk01');
+        ckBox.on('click', function() {
+            var idx = ckBox.index(this);
+            //우선 체크 해제
+            switch (idx) {
+                case 0:
+                    ckBox.eq(idx).prop('checked', false);
+                    break;
+                case 1:
+                    ckBox.eq(idx).prop('checked', false);
+                    break;
+                default:
+                    break;
+            }
+            if(idx == 0 || idx == 1){
+                privacy.eq(idx).addClass('active');
+            }
+        })
+        // 필수개인정보수집동의
+        function pesnalCheck(){
+            ckBox.eq(0).prop('checked',true);
+            privacy.removeClass('active');
+        }
+        // 마케팅동의
+        function marketingCheck(condition){
+            ckBox.eq(1).prop('checked',false);
+            ckBox.eq(2).prop('checked',false);
+            if(condition){
+                ckBox.eq(1).prop('checked',true);
+            }else{
+                ckBox.eq(2).prop('checked',true);
+            }
+            privacy.removeClass('active');
+        }
+        // 개인정보 전체 완료
+        function privacyCheck(){
+            if(!ckBox.eq(0).prop('checked')){
+                privacy.eq(2).addClass('active');
+            }else{
+                location.href="type01.html";
+            }
+        }
+
+
+
+
+        // $('.popup.type1 .btn_close').on('click', function() {
+        //     $('#chk01-1.type01').prop('checked', false);
+        // })
+    </script>
+</body>
+
+</html>
